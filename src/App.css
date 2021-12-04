@@ -1,38 +1,111 @@
-.App {
+.app {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  max-width: 375px;
+  padding: 10px;
+  background-color: #f6f6f6;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-top: 35px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__balance {
+  width: 100%;
+  align-items: flex-start;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__balance > span {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__balance > h2 {
+  margin-top: -3px;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.expenseCard__row {
+  max-height: 132px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.expenseCard__row::-webkit-scrollbar {
+  display: none;
+}
+
+.expenseCards {
+  margin-top: 30px;
+}
+
+.expenseCards > p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.expenseCards > hr {
+  border: 1px solid lightgray;
+  background: lightgray;
+}
+
+.app__transactionInfo__container > p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.app__transactionInfo__container > hr {
+  border: 1px solid lightgray;
+  background: lightgray;
+}
+
+.app__transactionInfo {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.app__transactionInfo > span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.app__transactionInfo > input {
+  height: 20px;
+  border: 1px solid #c9c4c4;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.app__transactionInfo > input::placeholder {
+  font-weight: 600;
+}
+
+button {
+  width: 100%;
+  background: #725ac2;
   color: white;
+  padding: 5px;
+  border: none;
+  outline: none;
+  height: 40px;
+  margin-top: 15px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  color: whitesmoke;
+  background-color: #291a57;
 }
